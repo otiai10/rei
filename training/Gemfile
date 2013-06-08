@@ -1,0 +1,3 @@
+source 'http://rubygems.org'
+
+#gem 'hpricot', :git=>'git@github.com:hpricot/hpricot.git'
