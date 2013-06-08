@@ -1,7 +1,6 @@
 #rei
 
-rubyでedit、それ(it)
-
+- 修正たくさんして、何がmodifiedなんだっけーってなる
 - git status して、ファイル名コピペして、% vi ぺーすと
 - とかめんどくさい
 - ので
@@ -30,3 +29,6 @@ rubyでedit、それ(it)
 ```shell
 alias rei='ruby PATH_TO/REI_RUBY/rei.rb'
 ```
+
+rei
+rubyでedit、それ(it)
