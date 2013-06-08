@@ -69,7 +69,7 @@ if res.nil?
   exit
 else
   unless rows[pos['y']].nil?
-    elements = rows[pos['y']].split(/[\n|\t|\b|\r|\s]/)
+    elements = rows[pos['y']].split(/[\n|\t|\b|\r|\s|:]/)
     if file_name = extract_filename(elements)
       exec('vim '.concat(file_name))
       return 0
