@@ -5,6 +5,7 @@ rubyでedit、それ(it)
 - git status して、ファイル名コピペして、% vi ぺーすと
 - とかめんどくさい
 - ので
+- この「コピーしてペースト」の手間のみを省きます
 
 #Usage
 
@@ -22,4 +23,10 @@ rubyでedit、それ(it)
 
 # など、ファイルパスを出力するコマンドなら
 # なんでも繋げることがでるお（＾ω＾ ≡ ＾ω＾）
+```
+
+# おすしたべたい
+.zshrc
+```shell
+alias rei='ruby PATH_TO/REI_RUBY/rei.rb'
 ```
