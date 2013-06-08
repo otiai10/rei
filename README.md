@@ -6,6 +6,9 @@
 - ので
 - この「コピーしてペースト」の手間のみを省きます
 
+#requirement
+ncurses
+
 #Usage
 
 ```shell
