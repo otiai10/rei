@@ -19,8 +19,10 @@ end
 def dispatch_keys(ch, pos)
   res = true
   case ch
-  when 'q'
+  when 'e', "\n"
     res = false
+  when 'q'
+    res = nil
   when 'j'
     pos['y'] += 1
   when 'k'
@@ -30,7 +32,7 @@ def dispatch_keys(ch, pos)
   when 'h'
     pos['x'] -= 1
   else
-    # do nothing
+    addstr(ch)
   end
   return res, pos
 end
@@ -63,13 +65,16 @@ end
 close_screen
 
 # 有効なファイルを選定してエディタを起動
-unless rows[pos['y']].nil?
-  elements = rows[pos['y']].split(/[\n|\t|\b|\r|\s]/)
-  if file_name = extract_filename(elements)
-    exec('vim '.concat(file_name))
-    return 0
+if res.nil?
+  exit
+else
+  unless rows[pos['y']].nil?
+    elements = rows[pos['y']].split(/[\n|\t|\b|\r|\s]/)
+    if file_name = extract_filename(elements)
+      exec('vim '.concat(file_name))
+      return 0
+    end
   end
 end
 
 puts "This row doesn't include valid filename => #{rows[pos['y']]}"
-
