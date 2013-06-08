@@ -32,7 +32,7 @@ def dispatch_keys(ch, pos)
   when 'h'
     pos['x'] -= 1
   else
-    addstr(ch)
+    # do nothing
   end
   return res, pos
 end
