@@ -30,5 +30,5 @@
 alias rei='ruby PATH_TO/REI_RUBY/rei.rb'
 ```
 
-rei
+「rei」
 rubyでedit、それ(it)
